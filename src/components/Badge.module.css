@@ -1,0 +1,78 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.sub {
+  color: var(--sub);
+  background: var(--sub-soft);
+}
+
+.off {
+  color: var(--off);
+  background: var(--off-soft);
+}
+
+.mov {
+  color: var(--mov);
+  background: var(--mov-soft);
+}
+
+.note {
+  color: var(--note);
+  background: var(--note-soft);
+}
+
+.add {
+  color: var(--ok);
+  background: var(--ok-soft);
+}
+
+.swatch.add {
+  background: var(--ok);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.swatch.sub {
+  background: var(--sub);
+}
+
+.swatch.off {
+  background: var(--off);
+}
+
+.swatch.mov {
+  background: var(--mov);
+}
+
+.swatch.note {
+  background: var(--note);
+}

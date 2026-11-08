@@ -1,0 +1,129 @@
+/* Gemeinsame Bausteine: Buttons, Karten, Seitenkopf, Zustände */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 550;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.12s, border-color 0.12s;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.primary {
+  composes: button;
+  background: var(--accent);
+  color: #fff;
+}
+
+.primary:not(:disabled):hover {
+  background: var(--accent-hover);
+}
+
+.secondary {
+  composes: button;
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.secondary:not(:disabled):hover {
+  background: var(--surface-2);
+}
+
+.ghost {
+  composes: button;
+  height: 30px;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.ghost:not(:disabled):hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.danger {
+  composes: ghost;
+}
+
+.danger:not(:disabled):hover {
+  background: var(--off-soft);
+  color: var(--off);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.pageHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.pageSubtitle {
+  margin-top: 4px;
+  color: var(--text-2);
+}
+
+.state {
+  composes: card;
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-2);
+}
+
+.stateTitle {
+  margin-bottom: 6px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.stateActions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.notice {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+.notice a {
+  color: var(--text);
+  font-weight: 550;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
